@@ -4,35 +4,36 @@ import com.burner.pokemongame.item.*;
 import java.util.ArrayList;
 import java.util.List; 
 
+@SuppressWarnings("unused")
 public class PokemonBuilder {
-    public String name;
-    public PokemonType type;
-    public String gender;
-    public int age;
-    public String job;
-    public int health;
-    public int vitalHealth;
-    public int exp;
-    public int hunger;
-    public int thirst;
-    public int muscleLevel;
-    public int depression;
-    public int excretionLevel;
-    public boolean casteReservation;
-    public boolean disabled;
-    public boolean shiny;
-    public boolean pokemonLifeInsurance;
-    public boolean pokemonHealthInsurance;
-    public boolean breedable;
-    public boolean isUnionMember;
-    public String unionMemberPosition;
-    public int unionLoyalty; // Corrected spelling to match standard
-    public String politicalStance;
-    public Pokemon mate;
-    public int bonesDropped;
-    public int insanity;
-    public int bloodLust; // Corrected spelling to match standard
-    public String religion; // Corrected spelling
+    private String name;
+    private PokemonType type;
+    private String gender;
+    private int age;
+    private String job;
+    private int health;
+    private int vitalHealth;
+    private int exp;
+    private int hunger;
+    private int thirst;
+    private int muscleLevel;
+    private int depression;
+    private int excretionLevel;
+    private boolean casteReservation;
+    private boolean disabled;
+    private boolean shiny;
+    private boolean pokemonLifeInsurance;
+    private boolean pokemonHealthInsurance;
+    private boolean breedable;
+    private boolean isUnionMember;
+    private String unionMemberPosition;
+    private int unionLoyalty; // Corrected spelling to match standard
+    private String politicalStance;
+    private Pokemon mate;
+    private int bonesDropped;
+    private int insanity;
+    private int bloodLust; // Corrected spelling to match standard
+    private String religion; // Corrected spelling
 
     // Collections initialized to empty ArrayLists to avoid NullPointerExceptions
     public List<PokemonType> pokemonItLoves = new ArrayList<>();
@@ -70,6 +71,49 @@ public class PokemonBuilder {
         this.insanity = 0;
         this.bloodLust = 0;
     }
+
+    //getters
+    public String getName(){return this.name;}
+    public PokemonType getType(){return this.type;}
+    public String getGender(){return this.gender;}
+    public int getAge(){return this.age;}
+    public String getJob(){return this.job;}
+    public int getHealth(){return this.health;}
+    public int getVitalHealth(){return this.vitalHealth;}
+    public int getExp(){return this.exp;}
+    public int getHunger(){return this.hunger;}
+    public int getThirst(){return this.thirst;}
+    public int getMuscleLevel(){return this.muscleLevel;}
+    public int getDepression(){return this.depression;}
+    public int getExcretionLevel(){return this.excretionLevel;}
+    public boolean getCasteReservation(){return this.casteReservation;}
+    public boolean getDisabled(){return this.disabled;}
+    public boolean getShiny(){return this.shiny;}
+    public boolean getPokemonLifeInsurance(){return this.pokemonLifeInsurance;}
+    public boolean getPokemonHealthInsurance(){return this.pokemonHealthInsurance;}
+    public boolean getBreedable(){return this.breedable;}
+    public boolean getIsUnionMember(){return this.isUnionMember;}
+    public String getUnionMemberPosition(){return this.unionMemberPosition;}
+    public int getUnionLoyalty(){return this.unionLoyalty;}
+    public String getPoliticalStance(){return this.politicalStance;}
+    public Pokemon getMate(){return this.mate;}
+    public int getBonesDropped(){return this.bonesDropped;}
+    public int getInsanity(){return this.insanity;}
+    public int getBloodLust(){return this.bloodLust;}
+    public String getReligion(){return this.religion;}
+
+    //getters for collections
+    public List<PokemonType> getPokemonItLoves() {return this.pokemonItLoves;} 
+    public List<PokemonType> getPokemonItHates() {return this.pokemonItHates;}
+    public List<PokemonType> getAttractedToType() {return this.attractedToType;}
+    public List<String> getDiseases() {return this.diseases;}
+    public List<Ability> getAbilities() {return this.abilities;}
+    public List<Drug> getDrugs() {return this.drugs;}
+    public List<PokemonType> getStrengths() {return this.strengths;}
+    public List<PokemonType> getWeaknesses() {return this.weaknesses;}
+    public List<Armour> getArmour() {return this.armour;}
+    public List<Item> getPokemonInventory() {return this.pokemonInventory;}
+
 
     public PokemonBuilder withGender(String gender) {
         this.gender = gender;
