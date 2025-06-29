@@ -1,7 +1,7 @@
-package com.burner.pokemongame.entities;
+package com.burner.pokemongame.item;
 import com.burner.pokemongame.exceptions.entities.runtime.BadArgumentException; 
 
-class Drug{
+public class Drug{
     private final int drugId;
     private final String name;
     private final DrugEffectEnum drugEffect;

@@ -1,6 +1,6 @@
-package com.burner.pokemongame.entities;
+package com.burner.pokemongame.item;
 
-public enum DrugEffectEnum{
+enum DrugEffectEnum{
     POISON,
     STUN,
     LOVE,

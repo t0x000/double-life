@@ -1,7 +1,9 @@
 package com.burner.pokemongame.entities;
 
+import com.burner.pokemongame.item.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Pokemon {
     private String name;
@@ -111,7 +113,7 @@ public class Pokemon {
     public void setUnionMemberPosition(String unionMemberPosition){this.unionMemberPosition = unionMemberPosition;}
     public void setUnionLoyalty(int unionLoyalty){this.unionLoyalty = unionLoyalty;} 
     public void setPoliticalStance(String politicalStance){this.politicalStance = politicalStance;}
-    public void setMate(String mate){this.mate = mate;}
+    public void setMate(Pokemon mate){this.mate = mate;}
     public void setBonesDropped(int bonesDropped){this.bonesDropped = bonesDropped;}
     public void setInsanity(int insanity){this.insanity = insanity;}
     public void setBloodLust(int bloodLust){this.bloodLust = bloodLust;} 
@@ -156,4 +158,100 @@ public class Pokemon {
     public List<PokemonType> getWeaknesses(){return new ArrayList<>(this.weaknesses);} 
     public List<Armour> getArmour(){return new ArrayList<>(this.armour);} 
     public List<Item> getPokemonInventory(){return new ArrayList<>(this.pokemonInventory);} 
+    @Override
+    public String toString() {
+        return String.format(
+            "--- Pokemon Details for %s (%s) ---\n" +
+            "  [Name]: %s\n" + // <-- ADDED %s HERE
+            "  [Type]: %s\n" + // <-- ADDED %s HERE
+            "  -> Gender: %s\n" +
+            "  -> Age: %d\n" +
+            "  -> Job: %s\n" +
+            "  -> Health: %d\n" +
+            "  -> Vital Health: %d\n" +
+            "  -> Experience: %d\n" +
+            "  -> Hunger: %d\n" +
+            "  -> Thirst: %d\n" +
+            "  -> Muscle Level: %d\n" +
+            "  -> Depression: %d\n" +
+            "  -> Excretion Level: %d\n" +
+            "  -> Caste Reservation: %b\n" +
+            "  -> Disabled: %b\n" +
+            "  -> Shiny: %b\n" +
+            "  -> Life Insurance: %b\n" +
+            "  -> Health Insurance: %b\n" +
+            "  -> Breedable: %b\n" +
+            "  -> Union Member: %b\n" +
+            "  -> Union Position: %s\n" +
+            "  -> Union Loyalty: %d\n" +
+            "  -> Political Stance: %s\n" +
+            "  -> Mate: %s\n" +
+            "  -> Bones Dropped: %d\n" +
+            "  -> Insanity: %d\n" +
+            "  -> Blood Lust: %d\n" +
+            "  -> Religion: %s\n" +
+            "  -> Loves Types: %s\n" +
+            "  -> Hates Types: %s\n" +
+            "  -> Attracted To: %s\n" +
+            "  -> Diseases: %s\n" +
+            "  -> Abilities: %s\n" +
+            "  -> Drugs: %s\n" +
+            "  -> Strengths: %s\n" +
+            "  -> Weaknesses: %s\n" +
+            "  -> Armour: %s\n" +
+            "  -> Inventory: %s\n" +
+            "---------------------------------------",
+            // ARGUMENTS START HERE
+            name, // For the header line: "--- Pokemon Details for %s"
+            type, // For the header line: " (%s) ---"
+            name, // For "[Name]: %s"
+            type, // For "[Type]: %s"
+            gender != null ? gender : "N/A",
+            age,
+            job != null ? job : "N/A",
+            health,
+            vitalHealth,
+            exp,
+            hunger,
+            thirst,
+            muscleLevel,
+            depression,
+            excretionLevel,
+            casteReservation,
+            disabled,
+            shiny,
+            pokemonLifeInsurance,
+            pokemonHealthInsurance,
+            breedable,
+            isUnionMember,
+            unionMemberPosition != null ? unionMemberPosition : "N/A",
+            unionLoyalty,
+            politicalStance != null ? politicalStance : "N/A",
+            mate != null ? mate.getName() : "None",
+            bonesDropped,
+            insanity,
+            bloodLust,
+            religion != null ? religion : "N/A",
+            pokemonItLoves != null && !pokemonItLoves.isEmpty() ?
+                pokemonItLoves.stream().map(PokemonType::name).collect(Collectors.joining(", ")) : "None",
+            pokemonItHates != null && !pokemonItHates.isEmpty() ?
+                pokemonItHates.stream().map(PokemonType::name).collect(Collectors.joining(", ")) : "None",
+            attractedToType != null && !attractedToType.isEmpty() ?
+                attractedToType.stream().map(PokemonType::name).collect(Collectors.joining(", ")) : "None",
+            diseases != null && !diseases.isEmpty() ?
+                String.join(", ", diseases) : "None",
+            abilities != null && !abilities.isEmpty() ?
+                abilities.stream().map(Ability::getName).collect(Collectors.joining(", ")) : "None",
+            drugs != null && !drugs.isEmpty() ?
+                drugs.stream().map(Drug::getName).collect(Collectors.joining(", ")) : "None",
+            strengths != null && !strengths.isEmpty() ?
+                strengths.stream().map(PokemonType::name).collect(Collectors.joining(", ")) : "None",
+            weaknesses != null && !weaknesses.isEmpty() ?
+                weaknesses.stream().map(PokemonType::name).collect(Collectors.joining(", ")) : "None",
+            armour != null && !armour.isEmpty() ?
+                armour.stream().map(Armour::getName).collect(Collectors.joining(", ")) : "None",
+            pokemonInventory != null && !pokemonInventory.isEmpty() ?
+                pokemonInventory.stream().map(Item::getName).collect(Collectors.joining(", ")) : "None"
+        );
+    }
 }

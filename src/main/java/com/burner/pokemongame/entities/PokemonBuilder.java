@@ -1,5 +1,6 @@
 package com.burner.pokemongame.entities;
 
+import com.burner.pokemongame.item.*;
 import java.util.ArrayList;
 import java.util.List; 
 
@@ -291,8 +292,8 @@ public class PokemonBuilder {
         return this;
     }
 
-    public Pokemon build() {
-        return new Pokemon(this);
+    public PokemonBuilder build() {
+        return this;
     }
 }
 
