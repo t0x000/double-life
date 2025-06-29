@@ -1,0 +1,11 @@
+/home/t0x000/projects/T0-JAV/pokemon-game/src/main/java/com/burner/pokemongame/App.java
+/home/t0x000/projects/T0-JAV/pokemon-game/src/main/java/com/burner/pokemongame/entities/Ability.java
+/home/t0x000/projects/T0-JAV/pokemon-game/src/main/java/com/burner/pokemongame/entities/AbilityTypeEnum.java
+/home/t0x000/projects/T0-JAV/pokemon-game/src/main/java/com/burner/pokemongame/entities/Armour.java
+/home/t0x000/projects/T0-JAV/pokemon-game/src/main/java/com/burner/pokemongame/entities/Drug.java
+/home/t0x000/projects/T0-JAV/pokemon-game/src/main/java/com/burner/pokemongame/entities/DrugEffectEnum.java
+/home/t0x000/projects/T0-JAV/pokemon-game/src/main/java/com/burner/pokemongame/entities/Item.java
+/home/t0x000/projects/T0-JAV/pokemon-game/src/main/java/com/burner/pokemongame/entities/Pokemon.java
+/home/t0x000/projects/T0-JAV/pokemon-game/src/main/java/com/burner/pokemongame/entities/PokemonBuilder.java
+/home/t0x000/projects/T0-JAV/pokemon-game/src/main/java/com/burner/pokemongame/entities/PokemonType.java
+/home/t0x000/projects/T0-JAV/pokemon-game/src/main/java/com/burner/pokemongame/exceptions/entities/runtime/BadArgumentException.java
