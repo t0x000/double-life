@@ -27,15 +27,14 @@ public class PokemonBuilder {
     private boolean breedable;
     private boolean isUnionMember;
     private String unionMemberPosition;
-    private int unionLoyalty; // Corrected spelling to match standard
+    private int unionLoyalty; 
     private String politicalStance;
     private Pokemon mate;
     private int bonesDropped;
     private int insanity;
-    private int bloodLust; // Corrected spelling to match standard
-    private String religion; // Corrected spelling
+    private int bloodLust; 
+    private String religion; 
 
-    // Collections initialized to empty ArrayLists to avoid NullPointerExceptions
     public List<PokemonType> pokemonItLoves = new ArrayList<>();
     public List<PokemonType> pokemonItHates = new ArrayList<>();
     public List<PokemonType> attractedToType = new ArrayList<>();
@@ -50,9 +49,8 @@ public class PokemonBuilder {
     public PokemonBuilder(String name, PokemonType type) {
         this.name = name;
         this.type = type;
-        // Set default values for other fields if necessary
-        this.health = 100; // Example default
-        this.vitalHealth = 5; // Example default
+        this.health = 100; 
+        this.vitalHealth = 5; 
         this.exp = 0;
         this.hunger = 0;
         this.thirst = 0;
